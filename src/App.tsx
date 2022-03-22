@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Articles } from "./components/Articles";
+import { Footer } from "./components/Footer";
+import { Introduction } from "./components/Introduction";
+import { Navbar } from "./components/Navbar";
+import { Persuasion } from "./components/Persuasion";
+import { image } from "./images/image";
+import './styles/css/easybank.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <div className="mockup-phone">
+        <img src={image.imageMockups} alt="mobile mockup" className="mockup"/>
+      </div>
+      <Introduction />
+      <Persuasion />
+      <Articles />
+      <Footer />
     </div>
   );
 }
