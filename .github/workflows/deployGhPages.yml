@@ -13,6 +13,11 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@master
 
+      - name: Set Git config
+        run: |
+          git config --local user.email "leybanlazada@gmail.com"
+          git config --local user.name "Leyban"
+          
       - name: Install 🔧
         run: npm install
 
