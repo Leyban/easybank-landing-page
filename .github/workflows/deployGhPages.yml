@@ -8,18 +8,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@master
-
-      - name: Set Git config
-        run: |
-          git config --local user.email "leybanlazada@gmail.com"
-          git config --local user.name "Leyban"
-          
+      - name: Set Git config email
+        run: git config --local user.email "leybanlazada@gmail.com"
+      - name: Set Git config username
+        run: git config --local user.name "Leyban"
       - name: Install 🔧
         run: npm install
-
       - name: Deploy to GH Pages 🚀
         run: npm run deploy
